@@ -150,4 +150,18 @@ public class DriveSubsystem extends SubsystemBase {
 //Returns The turn rate of the robot, in degrees per second
     return m_gyro.getRate() * (DriveConstants.kGyroReversed ? -1.0 : 1.0);
   }
+
+  /** Closed-loop position setpoint for the front-left turning motor (radians). */
+  public double getFrontLeftTurningSetpoint() {
+    return m_frontLeft.getTurningSetpoint();
+  }
+    public double getFrontRightTurningSetpoint() {
+    return m_frontRight.getTurningSetpoint();
+  }
+    public double getRearLeftTurningSetpoint() {
+    return m_rearLeft.getTurningSetpoint();
+  }
+    public double getRearRightTurningSetpoint() {
+    return m_rearRight.getTurningSetpoint();
+  }
 }

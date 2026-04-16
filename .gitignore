@@ -103,12 +103,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -162,7 +156,6 @@ bin/
 *.iml
 *.ipr
 *.iws
-.idea/
 out/
 
 # Fleet
