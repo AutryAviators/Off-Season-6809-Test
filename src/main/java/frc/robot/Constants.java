@@ -7,42 +7,38 @@ import edu.wpi.first.math.util.Units;
 
 public final class Constants {
   public static final class DriveConstants {
-    public static final double kMaxSpeedMetersPerSecond = 4.8;
-    public static final double kMaxAngularSpeed = 2 * Math.PI; // radians per second
 
-    public static final double kTrackWidth = Units.inchesToMeters(26.5);
-    // Distance between centers of right and left wheels on robot
-    public static final double kWheelBase = Units.inchesToMeters(26.5);
-    // Distance between front and back wheels on robot
-    public static final SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(
-        new Translation2d(kWheelBase / 2, kTrackWidth / 2),
-        new Translation2d(kWheelBase / 2, -kTrackWidth / 2),
-        new Translation2d(-kWheelBase / 2, kTrackWidth / 2),
-        new Translation2d(-kWheelBase / 2, -kTrackWidth / 2));
-
-    public static final double kFrontLeftChassisAngularOffset = -Math.PI / 2;
-    public static final double kFrontRightChassisAngularOffset = 0;
-    public static final double kBackLeftChassisAngularOffset = Math.PI;
-    public static final double kBackRightChassisAngularOffset = Math.PI / 2;
-
-    // SPARK CAN IDs
-    public static final int kFrontLeftDrivingCanId = 1;
-    public static final int kRearLeftDrivingCanId = 3;
-    public static final int kFrontRightDrivingCanId = 5;
-    public static final int kRearRightDrivingCanId = 7;
-
-    public static final int kFrontLeftTurningCanId = 2;
-    public static final int kRearLeftTurningCanId = 4;
-    public static final int kFrontRightTurningCanId = 6;
-    public static final int kRearRightTurningCanId = 8;
-
+    public static final double kMaxDriveSpeed = 4.8;
+    public static final double kMaxTurnSpeed = 2 * Math.PI; // radians per second
     public static final boolean kGyroReversed = false;
+
+    public static final double kDriveWidth = Units.inchesToMeters(26.5);
+    public static final double kDriveLength = Units.inchesToMeters(26.5);
+
+    public static final SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(
+        new Translation2d(kDriveLength / 2, kDriveWidth / 2),
+        new Translation2d(kDriveLength / 2, -kDriveWidth / 2),
+        new Translation2d(-kDriveLength / 2, kDriveWidth / 2),
+        new Translation2d(-kDriveLength / 2, -kDriveWidth / 2));
+
+    public static final int kFrontLeftDrivingCanId  = 1;
+    public static final int kRearLeftDrivingCanId   = 3;
+    public static final int kFrontRightDrivingCanId = 5;
+    public static final int kRearRightDrivingCanId  = 7;
+
+    public static final int kFrontLeftTurningCanId  = 2;
+    public static final int kRearLeftTurningCanId   = 4;
+    public static final int kFrontRightTurningCanId = 6;
+    public static final int kRearRightTurningCanId  = 8;
+
+    public static final double kFrontLeftAngularOffset  = -Math.PI / 2;
+    public static final double kFrontRightAngularOffset = 0;
+    public static final double kBackLeftAngularOffset   = Math.PI;
+    public static final double kBackRightAngularOffset  = Math.PI / 2;
   }
 
   public static final class ModuleConstants {
-    // The MAXSwerve module can be configured with one of three pinion gears: 12T,
-    // 13T, or 14T. This changes the drive speed of the module (a pinion gear with
-    // more teeth will result in a robot that drives faster). Ask anderson
+
     public static final int kDrivingMotorPinionTeeth = 14;
 
     public static final double kDrivingMotorFreeSpeedRps = NeoMotorConstants.kFreeSpeedRpm / 60;
