@@ -12,8 +12,8 @@ public final class Constants {
     public static final double kMaxTurnSpeed = 2 * Math.PI; // radians per second
     public static final boolean kGyroReversed = false;
 
-    public static final double kDriveWidth = Units.inchesToMeters(26.5);
-    public static final double kDriveLength = Units.inchesToMeters(26.5);
+    public static final double kDriveWidth = Units.inchesToMeters(26.5);    //Left to right
+    public static final double kDriveLength = Units.inchesToMeters(26.5);   //Front to Back
 
     public static final SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(
         new Translation2d(kDriveLength / 2, kDriveWidth / 2),
